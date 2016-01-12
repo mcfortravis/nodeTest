@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - 5.1.0
 before_script:
-  - curl "http://localhost:8000"
+  - java -version
+  - node ttt.js &
+  - wget https://www.dropbox.com/s/v58248y87cc8wsc/hp4m-installer-1.51.01.2371.tar.gz?dl=0
   - ls
-  - sleep 5
+  - sleep 50
 script: curl "http://localhost:8000"
