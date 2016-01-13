@@ -6,5 +6,8 @@ before_script:
   - node ttt.js &
   - wget https://www.dropbox.com/s/v58248y87cc8wsc/hp4m-installer-1.51.01.2371.tar.gz?dl=0
   - ls
+  - sudo chmod +x aa.sh
+  - ./aa.sh
   - sleep 50
 script: curl "http://localhost:8000"
+script: curl "http://localhost:8080"
