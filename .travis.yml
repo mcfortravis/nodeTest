@@ -5,6 +5,7 @@ services:
   - postgresql
 before_script:
   - java -version
+  - psql -c 'ALTER USER postgres WITH PASSWORD "password";' -U postgres
   - node ttt.js &
   - wget https://www.dropbox.com/s/kuye7ikx5xbaqm6/z
   - pwd
@@ -14,7 +15,7 @@ before_script:
   - ./aa.sh
   - cp hpmc/Schema/hp4m-database-jar-with-dependencies.jar hpmc
   - cd hpmc
-  - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p  -i -port 5432 -ux 2 -home `pwd` 
+  - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p password  -i -port 5432 -ux 2 -home "/home/travis/build/mcfortravis/nodeTest/hpmc" 
   - sleep 30
 script: curl "http://localhost:8000"
 script: curl "http://localhost:8080"
