@@ -1,13 +1,20 @@
 language: node_js
 node_js:
   - 5.1.0
+services:
+  - postgresql
 before_script:
   - java -version
   - node ttt.js &
-  - wget https://www.dropbox.com/s/v58248y87cc8wsc/hp4m-installer-1.51.01.2371.tar.gz?dl=0
+  - wget https://www.dropbox.com/s/kuye7ikx5xbaqm6/z
+  - pwd
   - ls
+  - echo "@@@@@@@@@@@@@@@@@@@@@@"
   - sudo chmod +x aa.sh
   - ./aa.sh
+  - cp hpmc/Schema/hp4m-database-jar-with-dependencies.jar hpmc
+  - cd hpmc
+  - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p  -i -port 5432 -ux 2 -home `pwd` 
   - sleep 30
 script: curl "http://localhost:8000"
 script: curl "http://localhost:8080"
