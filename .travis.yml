@@ -5,7 +5,7 @@ services:
   - postgresql
 before_script:
   - java -version
-  - psql -c 'ALTER USER postgres WITH PASSWORD "password";' -U postgres
+  - psql -c "ALTER USER postgres WITH PASSWORD 'password';" -U postgres
   - node ttt.js &
   - wget https://www.dropbox.com/s/kuye7ikx5xbaqm6/z
   - pwd
