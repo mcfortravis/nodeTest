@@ -24,4 +24,3 @@ before_script:
   - sleep 320
   
 script: curl  "http://localhost:8080/rest/client/login"
-script: curl "http://localhost:8080"
