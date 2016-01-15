@@ -15,8 +15,8 @@ before_script:
   - ./aa.sh
   - cd hpmc/Schema
   - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p password  -i -port 5432 -ux 2 -home "/home/travis/build/mcfortravis/nodeTest/hpmc" 
-  - cd ..
-  - ./bin/start-jetty.sh
+  - cd bin
+  - ./start-jetty.sh
   - sleep 30
 script: curl "http://localhost:8000"
 script: curl "http://localhost:8080"
