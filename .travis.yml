@@ -23,4 +23,4 @@ before_script:
   - ./start-jetty.sh
   - sleep 320
   
-script: curl -H "Content-Type: application/json" -X POST -d '{name: "admin@default.com", password: "password", accountName: "default", locale: "en"}' "http://localhost:8080/rest/client/login"
+script: curl -X POST -d '{name: "admin@default.com", password: "password", accountName: "default", locale: "en"}' "http://localhost:8080/rest/client/login"
