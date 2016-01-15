@@ -15,6 +15,7 @@ before_script:
   - ./aa.sh
   - cd hpmc/Schema
   - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p password  -i -port 5432 -ux 2 -home "/home/travis/build/mcfortravis/nodeTest/hpmc" 
+  - cd ..
   - cd bin
   - ./start-jetty.sh
   - sleep 30
