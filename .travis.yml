@@ -26,3 +26,4 @@ before_script:
   - ls
 
 script: java -cp . UploadApp
+after_script: ls -al /temp
