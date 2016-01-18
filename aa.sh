@@ -2,5 +2,5 @@
 
 echo testhere
 
-tar -xvf z
+tar -xvf z.tar.gz
 ls

@@ -10,7 +10,7 @@ before_script:
   - psql -c "ALTER USER hpmcadmin WITH SUPERUSER;" -U postgres
   - psql -c "ALTER USER postgres WITH PASSWORD 'password';" -U postgres
   - node ttt.js &
-  - wget https://www.dropbox.com/s/kuye7ikx5xbaqm6/z
+  - wget https://www.dropbox.com/s/zt265xusoy13is7/z.tar.gz
   - pwd
   - ls
   - echo "@@@@@@@@@@@@@@@@@@@@@@"
@@ -21,6 +21,6 @@ before_script:
   - cd ..
   - cd bin
   - ./start-jetty.sh
-  - sleep 320
+  - sleep 420
   
 script: curl -H "Content-Type:application/json" -X POST -d '{name:"admin@default.com", password:"password", accountName:"default", locale:"en"}' "http://localhost:8080/rest/client/login"
