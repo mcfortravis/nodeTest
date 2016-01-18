@@ -5,6 +5,7 @@ services:
   - postgresql
 before_script:
   - java -version
+  - chmod +x uploadapp.sh
   - psql -c "CREATE USER hpmcadmin WITH PASSWORD 'password1';" -U postgres
   - psql -c "ALTER USER hpmcadmin CREATEDB;" -U postgres
   - psql -c "ALTER USER hpmcadmin WITH SUPERUSER;" -U postgres
@@ -26,4 +27,4 @@ before_script:
   - ls
 
 script: java -cp . UploadApp
-after_script: ls -al /temp
+after_script: ./uploadapp.sh localhost hp-demo-app.apk
