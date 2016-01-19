@@ -35,3 +35,4 @@ script: java -cp . UploadApp
 after_script: 
   - echo -----------------------------===================
   - cat /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/ApkInfuser/log/ApkInfuser.log
+  - ./uploadapp.sh localhost hp-demo-app.apk.signed.debug.apk
