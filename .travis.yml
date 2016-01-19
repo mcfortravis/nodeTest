@@ -14,6 +14,8 @@ before_script:
   - wget https://www.dropbox.com/s/zt265xusoy13is7/z.tar.gz
   - pwd
   - ls
+  - wget https://www.dropbox.com/s/8xtvfjge3g50bg0/par.tar.gz
+  - tar -xvf par.tar.gz
   - echo "@@@@@@@@@@@@@@@@@@@@@@"
   - sudo chmod +x aa.sh
   - ./aa.sh
@@ -25,7 +27,7 @@ before_script:
   - sleep 420
   - cd /home/travis/build/mcfortravis/nodeTest
   - ls
-  - /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/HP4M_ApkInfuser.sh -signdebug -hybrid -native -jsdir /home/travis/build/mcfortravis/nodeTest/hpmc/HybridJS/android /home/travis/build/mcfortravis/nodeTest/hp-demo-app.apk
+  - chmod -R 777 hpmc
   - echo $?
 script: java -cp . UploadApp
 after_script: ./uploadapp.sh localhost hp-demo-app.apk
