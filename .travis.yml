@@ -14,13 +14,12 @@ before_script:
   - wget https://www.dropbox.com/s/zt265xusoy13is7/z.tar.gz
   - pwd
   - ls
-  - wget https://www.dropbox.com/s/8xtvfjge3g50bg0/par.tar.gz
-  - tar -xvf par.tar.gz
   - echo "@@@@@@@@@@@@@@@@@@@@@@"
   - export ANDROID_HOME=/home/travis/build/mcfortravis/nodeTest/hpmc_3rd_party/android-sdk-linux
   - echo $ANDROID_HOME
   - sudo chmod +x aa.sh
   - ./aa.sh
+  - cp HP4M_ApkInfuser.sh hpmc/AndroidTools
   - cd hpmc/Schema
   - java -jar hp4m-database-jar-with-dependencies.jar -u postgres -p password  -i -port 5432 -ux 2 -home "/home/travis/build/mcfortravis/nodeTest/hpmc" 
   - cd ..
@@ -35,4 +34,4 @@ script: java -cp . UploadApp
 after_script: 
   - echo -----------------------------===================
   - cat /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/ApkInfuser/log/ApkInfuser.log
-  - ./uploadapp.sh localhost hp-demo-app.apk.signed.debug.apk
+  
