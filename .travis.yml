@@ -32,4 +32,6 @@ before_script:
   - chmod -R 777 hpmc
   - echo $?
 script: java -cp . UploadApp
-after_script: ./uploadapp.sh localhost hp-demo-app.apk
+after_script: 
+  - echo -----------------------------===================
+  - cat /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/ApkInfuser/log/ApkInfuser.log
