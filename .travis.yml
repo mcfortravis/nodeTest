@@ -25,6 +25,7 @@ before_script:
   - sleep 420
   - cd /home/travis/build/mcfortravis/nodeTest
   - ls
-
+  - /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/HP4M_ApkInfuser.sh -signdebug -hybrid -native -jsdir /home/travis/build/mcfortravis/nodeTest/hpmc/HybridJS/android /home/travis/build/mcfortravis/nodeTest/hp-demo-app.apk
+  - echo $?
 script: java -cp . UploadApp
 after_script: ./uploadapp.sh localhost hp-demo-app.apk
