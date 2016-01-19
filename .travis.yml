@@ -32,6 +32,6 @@ before_script:
   - echo $?
 script: java -cp . UploadApp
 after_script: 
-  - echo -----------------------------===================
+  - echo -----------------------------===========
   - cat /home/travis/build/mcfortravis/nodeTest/hpmc/AndroidTools/ApkInfuser/log/ApkInfuser.log
   
