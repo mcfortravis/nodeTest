@@ -25,7 +25,7 @@ before_script:
   - cd ..
   - cd bin
   - ./start-jetty.sh
-  - sleep 220
+  - sleep 221
   - cd /home/travis/build/mcfortravis/nodeTest
   - ls
   - chmod -R 777 hpmc
