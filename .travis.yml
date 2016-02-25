@@ -5,6 +5,7 @@ services:
   - postgresql
 before_script:
   - java -version
+  - exit 6
   - chmod +x uploadapp.sh
   - psql -c "CREATE USER hpmcadmin WITH PASSWORD 'password1';" -U postgres
   - psql -c "ALTER USER hpmcadmin CREATEDB;" -U postgres
