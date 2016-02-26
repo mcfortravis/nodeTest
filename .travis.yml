@@ -13,6 +13,7 @@ before_script:
   - node ttt.js &
   - wget https://www.dropbox.com/s/zt265xusoy13is7/z.tar.gz
   - pwd
+  - echo test
   - ls
   - export ANDROID_HOME=/home/travis/build/mcfortravis/nodeTest/hpmc_3rd_party/android-sdk-linux
   - echo $ANDROID_HOME
